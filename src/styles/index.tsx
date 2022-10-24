@@ -48,9 +48,6 @@ table {
 
 * {
   box-sizing: border-box;
-  transition-property: background-color;
-  transition-duration: 0.5s;
-  
 }
 
 
