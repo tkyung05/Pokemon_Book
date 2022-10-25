@@ -1,4 +1,11 @@
-import { Container, FindLED, LED, LEDContainer, PokePhoto } from "./style";
+import {
+  Container,
+  FindLED,
+  LED,
+  LEDContainer,
+  PokePhotoFrame,
+  PokePhoto,
+} from "./style";
 import { FindLEDColor, LEDColors, whiteColor } from "./constants";
 
 export function PokeInfoBlock() {
@@ -11,7 +18,9 @@ export function PokeInfoBlock() {
         <LED LEDColor={LEDColors.greenColor} />
       </LEDContainer>
 
-      <PokePhoto bgColor={whiteColor}></PokePhoto>
+      <PokePhotoFrame bgColor={whiteColor}>
+        {/* <PokePhoto src={} /> */}
+      </PokePhotoFrame>
     </Container>
   );
 }

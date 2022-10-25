@@ -33,7 +33,7 @@ export const LED = styled.div<{ LEDColor: string }>`
   margin: 5px;
 `;
 
-export const PokePhoto = styled.div<{ bgColor: string }>`
+export const PokePhotoFrame = styled.div<{ bgColor: string }>`
   position: relative;
   background-color: ${(props) => props.bgColor};
   width: 70%;
@@ -41,3 +41,5 @@ export const PokePhoto = styled.div<{ bgColor: string }>`
   margin: 30px auto 0 auto;
   border-radius: 5px 5px 5px 50px;
 `;
+
+export const PokePhoto = styled.img``;
