@@ -1,5 +1,6 @@
 import axios, { AxiosRequestConfig } from "axios";
 import { STATUS_200, STATUS_404 } from "./constants";
+import { IPokeInfo } from "./interfaces";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 const basicConfig: AxiosRequestConfig = {

@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import {
-  FindLEDColor,
   PhotoFrameBgColor,
   PhotoFrameOutlineColor,
-  whiteColor,
   PokeInfoBoxColor,
   ProgressBgColor,
   ProgressBarColor,
@@ -26,12 +24,24 @@ export const Container = styled.div`
 `;
 
 export const FindLED = styled.div`
-  background-color: ${FindLEDColor};
   width: 20%;
   padding-bottom: 20%;
   border-radius: 50%;
   outline: solid 5px white;
   margin: 7%;
+
+  animation-duration: 1s;
+  animation-name: bgColor;
+  animation-iteration-count: infinite;
+
+  @keyframes bgColor {
+    0% {
+      background-color: #00a8ff;
+    }
+    100% {
+      background-color: #4b7bec;
+    }
+  }
 `;
 
 export const LEDContainer = styled.div`
@@ -63,7 +73,7 @@ export const PokePhotoFrame = styled.div`
 
 export const PokePhoto = styled.img`
   position: absolute;
-  width: 100%;
+  width: 80%;
   height: auto;
 
   animation-duration: 1s;
@@ -83,8 +93,8 @@ export const PokePhoto = styled.img`
 
 export const PokeInfoNameText = styled.p`
   position: absolute;
-  top: 5%;
-  color: ${whiteColor};
+  top: 7%;
+  color: ${yellowColor};
   font-size: 16px;
   z-index: 1;
 `;

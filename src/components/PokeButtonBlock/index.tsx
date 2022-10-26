@@ -1,13 +1,19 @@
 import { useState } from "react";
-import { Container, PokeSearchBtn, PokeSearchInput } from "./style";
 import { getPokeOne } from "../../APIs/getPokeOne";
 import { STATUS_200 } from "../../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { usePokeInfo } from "../../hooks/usePokeInfo";
+import {
+  Container,
+  PokeSearchBtn,
+  PokeSearchInput,
+  PokeDetailBtn,
+} from "./style";
+import { IPokeInfo } from "../../interfaces";
 
 export function PokeButtonBlock() {
-  const [searchPoke, setSearchPoke] = useState("");
+  const [searchPoke, setSearchPoke] = useState<string>("");
   const { setPokeInfo } = usePokeInfo();
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -16,10 +22,8 @@ export function PokeButtonBlock() {
   const onSubmit = async () => {
     const { data, status } = await getPokeOne(searchPoke);
 
-    console.log(data, status);
-
     if (status === STATUS_200) {
-      const newPokeInfo = {
+      const newPokeInfo: IPokeInfo = {
         id: data.id,
         name: data.name,
         sprite: data.sprites.front_default,
@@ -31,11 +35,18 @@ export function PokeButtonBlock() {
 
   return (
     <Container>
-      <PokeSearchInput type={"search"} onChange={onChange} />
+      <PokeSearchInput
+        type={"search"}
+        onChange={onChange}
+        placeholder={"Find Pokemon"}
+        spellCheck={false}
+      />
 
       <PokeSearchBtn onClick={onSubmit}>
         Poke Poke <FontAwesomeIcon icon={faMagnifyingGlass} />
       </PokeSearchBtn>
+
+      <PokeDetailBtn />
     </Container>
   );
 }
