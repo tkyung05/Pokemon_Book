@@ -28,7 +28,7 @@ APIController.interceptors.response.use(
           sprites: {
             front_default: "img/missing_no.png",
           },
-          name: "missing no",
+          name: "missingNo",
           stats: [
             {
               base_stat: 9999,

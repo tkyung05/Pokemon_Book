@@ -11,7 +11,7 @@ export const pokeInfoAtom = atom({
         base_stat: 0,
         effort: 0,
         stat: {
-          name: "",
+          name: "not found",
           url: "",
         },
       },

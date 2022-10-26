@@ -37,10 +37,16 @@ body {
   width: 100vw;
 	height: 100vh;
 
+	@media screen and (max-width: 800px) {
+		height: 180vh;
+		background-image: linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ), url( "img/mobileBg.jpeg" );
+  }
 	progress {
     appearance: none;
 	}
-
 	* {
 		font-family: 'Galmuri9';
 		input::-webkit-search-decoration,
@@ -48,6 +54,10 @@ body {
 		input::-webkit-search-results-button,
 		input::-webkit-search-results-decoration{
 			display:none;
+		}
+
+		input {
+			border: none;
 		}
 	}
 }
@@ -70,8 +80,10 @@ table {
 
 * {
   box-sizing: border-box;
+	
 }
 
 a {
   text-decoration: none;
-}`;
+}
+`;

@@ -9,6 +9,8 @@ import {
   PokeSearchBtn,
   PokeSearchInput,
   PokeDetailBtn,
+  Block,
+  BlockList,
 } from "./style";
 import { IPokeInfo } from "../../interfaces";
 
@@ -47,6 +49,11 @@ export function PokeButtonBlock() {
       </PokeSearchBtn>
 
       <PokeDetailBtn />
+
+      <BlockList>
+        <Block />
+        <Block />
+      </BlockList>
     </Container>
   );
 }

@@ -14,7 +14,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: ${(props) => props.theme.bookBgColor};
-  width: 270px;
+  width: 300px;
   height: 400px;
   outline: solid 7px ${outlineColor};
   border-radius: 10px;
@@ -76,4 +76,17 @@ export const PokeDetailBtn = styled.div`
       background-color: #ffc048;
     }
   }
+`;
+
+export const Block = styled.div`
+  background-color: #2f3542;
+  width: 40%;
+  height: 40px;
+  border-radius: 5px;
+`;
+
+export const BlockList = styled.div`
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
 `;
