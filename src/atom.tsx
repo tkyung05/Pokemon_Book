@@ -1,7 +1,7 @@
 import { atom } from "recoil";
 
-export const previewPokeInfo = atom({
-  key: "previewPokeInfo",
+export const pokeInfoAtom = atom({
+  key: "pokeInfoAtom",
   default: {
     id: 0,
     sprite: "",

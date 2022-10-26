@@ -1,21 +1,22 @@
 import { useState } from "react";
 import { Container, PokeSearchBtn, PokeSearchInput } from "./style";
 import { getPokeOne } from "../../APIs/getPokeOne";
-import { useSetRecoilState } from "recoil";
-import { previewPokeInfo } from "../../atom";
 import { STATUS_200 } from "../../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { usePokeInfo } from "../../hooks/usePokeInfo";
 
 export function PokeButtonBlock() {
   const [searchPoke, setSearchPoke] = useState("");
-  const setPokeInfo = useSetRecoilState(previewPokeInfo);
+  const { setPokeInfo } = usePokeInfo();
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchPoke(e.target.value);
   };
   const onSubmit = async () => {
     const { data, status } = await getPokeOne(searchPoke);
+
+    console.log(data, status);
 
     if (status === STATUS_200) {
       const newPokeInfo = {
