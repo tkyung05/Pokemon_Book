@@ -6,7 +6,15 @@ export const previewPokeInfo = atom({
     id: 0,
     sprite: "",
     name: "",
-    types: [""],
-    stats: [{}],
+    stats: [
+      {
+        base_stat: 0,
+        effort: 0,
+        stat: {
+          name: "",
+          url: "",
+        },
+      },
+    ],
   },
 });

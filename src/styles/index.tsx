@@ -28,8 +28,25 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-  font-family: "Noto Sans KR", sans-serif;
+	background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url( "img/bg.jpeg" );
+	background-repeat:no-repeat;
+	background-size: cover;
+  width: 100vw;
+	height: 100vh;
+
+	progress {
+    appearance: none;
+	}
+
+	* {
+		font-family: 'Galmuri9';
+
+	}
 }
+
 ol, ul {
 	list-style: none;
 }
@@ -49,7 +66,6 @@ table {
 * {
   box-sizing: border-box;
 }
-
 
 a {
   text-decoration: none;

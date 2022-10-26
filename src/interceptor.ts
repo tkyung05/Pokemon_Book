@@ -1,4 +1,5 @@
 import axios, { AxiosRequestConfig } from "axios";
+import { STATUS_404 } from "./constants";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
@@ -20,7 +21,7 @@ APIController.interceptors.response.use(
   },
   async (err) => {
     try {
-      if (err.response && err.response.status === 404) {
+      if (err.response && err.response.status === STATUS_404) {
         console.log("예외 처리");
         return;
       }
