@@ -1,6 +1,5 @@
 import axios, { AxiosRequestConfig } from "axios";
-import { STATUS_200, STATUS_404 } from "./constants";
-import { IPokeInfo } from "./interfaces";
+import { missingPoke, STATUS_200, STATUS_404 } from "./constants";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 const basicConfig: AxiosRequestConfig = {
@@ -23,40 +22,6 @@ APIController.interceptors.response.use(
 
     try {
       if (err.response && err.response.status === STATUS_404) {
-        const missingPoke = {
-          id: 9999,
-          sprites: {
-            front_default: "img/missing_no.png",
-          },
-          name: "missingNo",
-          stats: [
-            {
-              base_stat: 9999,
-              effort: 0,
-              stat: {
-                name: "hp",
-                url: "",
-              },
-            },
-            {
-              base_stat: 9999,
-              effort: 0,
-              stat: {
-                name: "attack",
-                url: "",
-              },
-            },
-            {
-              base_stat: 9999,
-              effort: 0,
-              stat: {
-                name: "defense",
-                url: "",
-              },
-            },
-          ],
-        };
-
         config.data = missingPoke;
         config.status = STATUS_200;
         return config;

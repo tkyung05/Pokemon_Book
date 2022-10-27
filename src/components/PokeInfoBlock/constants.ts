@@ -9,7 +9,7 @@ export const yellowColor = "#ffdd59";
 
 export const PhotoFrameBgColor = "#30336b";
 export const PhotoFrameOutlineColor = "#dcdde1";
-export const PokeInfoBoxColor = "#006266";
+export const PokeInfoBoxColor = "#2f3542";
 export const ProgressBgColor = "#f0f0f0";
 export const ProgressBarColor = "#0097e6";
 

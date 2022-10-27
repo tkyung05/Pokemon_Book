@@ -32,7 +32,7 @@ export function PokeInfoBlock() {
           No.{pokeInfos.id} {pokeInfos.name}
         </PokeInfoNameText>
 
-        <PokePhoto src={pokeInfos.sprite} />
+        <PokePhoto src={pokeInfos.sprite_front} />
       </PokePhotoFrame>
 
       <PokeInfoBox>

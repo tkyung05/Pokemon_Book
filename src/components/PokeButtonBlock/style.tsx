@@ -42,7 +42,7 @@ export const PokeSearchInput = styled.input`
 export const PokeSearchBtn = styled.button`
   width: 80%;
   height: 10%;
-  font-size: 14px;
+  font-size: 15px;
   border: none;
   border-radius: 5px;
   background-color: ${PokeSearchBtnColor};
@@ -61,7 +61,7 @@ export const PokeDetailBtn = styled.div`
   height: 100px;
   border-radius: 50%;
   outline: solid 10px ${deepYellowColor};
-  margin: 15%;
+  margin: 12.5%;
   cursor: pointer;
 
   animation-duration: 1s;
@@ -87,6 +87,6 @@ export const Block = styled.div`
 
 export const BlockList = styled.div`
   display: flex;
-  width: 80%;
   justify-content: space-between;
+  width: 80%;
 `;

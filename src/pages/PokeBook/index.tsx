@@ -5,18 +5,18 @@ import styled from "styled-components";
 
 export function PokeBook() {
   return (
-    <C>
+    <ScreenContainer>
       <Container>
         <PokeBookFrame>
           <PokeInfoBlock />
           <PokeButtonBlock />
         </PokeBookFrame>
       </Container>
-    </C>
+    </ScreenContainer>
   );
 }
 
-const C = styled.div`
+const ScreenContainer = styled.div`
   display: flex;
   justify-content: center;
 `;

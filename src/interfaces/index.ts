@@ -1,7 +1,21 @@
 export interface IPokeInfo {
   id: number;
-  sprite: string;
   name: string;
+
+  sprite_front: string;
+  sprite_back: string;
+
+  weight: number;
+  height: number;
+
+  types: {
+    slot: number;
+    type: {
+      name: string;
+      url: string;
+    };
+  }[];
+
   stats: {
     base_stat: number;
     effort: number;

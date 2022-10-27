@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getPokeOne } from "../../APIs/getPokeOne";
+import { getPokeInfo } from "../../APIs/getPokeInfo";
 import { STATUS_200 } from "../../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
@@ -13,8 +13,10 @@ import {
   BlockList,
 } from "./style";
 import { IPokeInfo } from "../../interfaces";
+import { DetailPokeInfoModal } from "../DetailPokeInfoModal";
 
 export function PokeButtonBlock() {
+  const [detailBtn, setDetailBtn] = useState<boolean>(false);
   const [searchPoke, setSearchPoke] = useState<string>("");
   const { setPokeInfo } = usePokeInfo();
 
@@ -22,38 +24,50 @@ export function PokeButtonBlock() {
     setSearchPoke(e.target.value);
   };
   const onSubmit = async () => {
-    const { data, status } = await getPokeOne(searchPoke);
+    const { data, status } = await getPokeInfo(searchPoke);
 
     if (status === STATUS_200) {
       const newPokeInfo: IPokeInfo = {
         id: data.id,
         name: data.name,
-        sprite: data.sprites.front_default,
+        height: data.height,
+        weight: data.weight,
+        types: data.types,
+        sprite_front: data.sprites.front_default,
+        sprite_back: data.sprites.back_default,
         stats: data.stats.slice(0, 3),
       };
       setPokeInfo(newPokeInfo);
+    } else {
+      console.log(status, data);
     }
   };
 
   return (
     <Container>
-      <PokeSearchInput
-        type={"search"}
-        onChange={onChange}
-        placeholder={"Find Pokemon"}
-        spellCheck={false}
-      />
+      {detailBtn ? (
+        <DetailPokeInfoModal />
+      ) : (
+        <>
+          <PokeSearchInput
+            type={"search"}
+            onChange={onChange}
+            placeholder={"Find Pokemon"}
+            spellCheck={false}
+          />
 
-      <PokeSearchBtn onClick={onSubmit}>
-        Poke Poke <FontAwesomeIcon icon={faMagnifyingGlass} />
-      </PokeSearchBtn>
+          <PokeSearchBtn onClick={onSubmit}>
+            Poke Poke <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </PokeSearchBtn>
 
-      <PokeDetailBtn />
+          <PokeDetailBtn onClick={() => setDetailBtn(true)} />
 
-      <BlockList>
-        <Block />
-        <Block />
-      </BlockList>
+          <BlockList>
+            <Block />
+            <Block />
+          </BlockList>
+        </>
+      )}
     </Container>
   );
 }
