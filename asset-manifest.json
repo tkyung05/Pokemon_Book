@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Pokemon_Book/static/js/main.5f249300.js",
+    "main.js": "/Pokemon_Book/static/js/main.1938ef1f.js",
     "index.html": "/Pokemon_Book/index.html",
-    "main.5f249300.js.map": "/Pokemon_Book/static/js/main.5f249300.js.map"
+    "main.1938ef1f.js.map": "/Pokemon_Book/static/js/main.1938ef1f.js.map"
   },
   "entrypoints": [
-    "static/js/main.5f249300.js"
+    "static/js/main.1938ef1f.js"
   ]
 }
