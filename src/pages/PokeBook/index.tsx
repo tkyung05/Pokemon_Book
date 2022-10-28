@@ -1,5 +1,4 @@
-import { PokeInfoBlock } from "../../components/PokeInfoBlock";
-import { PokeButtonBlock } from "../../components/PokeButtonBlock";
+import { PokeButtonBlock, PokeInfoBlock } from "../../components/";
 import { Container, PokeBookFrame, ScreenContainer } from "./style";
 
 export function PokeBook() {

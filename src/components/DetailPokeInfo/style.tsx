@@ -1,5 +1,10 @@
 import styled from "styled-components";
-import { detailBgColor, whiteColor, yellowColor } from "./constants";
+import {
+  deepYellowColor,
+  detailBgColor,
+  whiteColor,
+  yellowColor,
+} from "./constants";
 
 export const Container = styled.div`
   background-color: ${detailBgColor};
@@ -59,9 +64,10 @@ export const DownBtn = styled.div`
   font-size: 35px;
   background-color: ${yellowColor};
   color: ${detailBgColor};
+  transition: 1s;
 
   &:hover {
-    background-color: ${yellowColor};
+    background-color: ${deepYellowColor};
     cursor: pointer;
   }
 `;
@@ -83,4 +89,5 @@ export const NotFoundText = styled.p`
 export const NotFoundImg = styled.img`
   width: 80%;
   height: auto;
+  border-radius: 10px;
 `;

@@ -52,7 +52,6 @@ export const PokeSearchBtn = styled.button`
   &:hover {
     cursor: pointer;
     background-color: ${PokeSearchBtnHoverColor};
-    color: ${whiteColor};
   }
 `;
 
@@ -70,10 +69,10 @@ export const PokeDetailBtn = styled.div`
 
   @keyframes bgColorAnim {
     0% {
-      background-color: #ffdd59;
+      background-color: #fffa65;
     }
     100% {
-      background-color: #ffc048;
+      background-color: #ffdd59;
     }
   }
 `;

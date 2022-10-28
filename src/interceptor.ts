@@ -22,8 +22,10 @@ APIController.interceptors.response.use(
 
     try {
       if (err.response && err.response.status === STATUS_404) {
+        /* 이상한 값 검색하면 (404) 미싱노 데이터 보내주기*/
         config.data = missingPoke;
         config.status = STATUS_200;
+
         return config;
       }
     } catch (err) {

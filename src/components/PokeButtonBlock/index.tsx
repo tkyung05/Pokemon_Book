@@ -13,9 +13,9 @@ import {
   BlockList,
 } from "./style";
 import { IPokeInfo } from "../../interfaces";
-import { DetailPokeInfo } from "../DetailPokeInfo";
+import { DetailPokeInfo } from "../../components";
 
-export function PokeButtonBlock() {
+export default function PokeButtonBlock() {
   const [detailBtn, setDetailBtn] = useState<boolean>(false);
   const [searchPoke, setSearchPoke] = useState<string>("");
   const { setPokeInfo } = usePokeInfo();
@@ -45,6 +45,7 @@ export function PokeButtonBlock() {
 
   return (
     <Container>
+      {/* 상세 페이지 띄우기 or 기본 페이지 */}
       {detailBtn ? (
         <DetailPokeInfo setDownBtn={setDetailBtn} />
       ) : (

@@ -15,11 +15,12 @@ import { LEDColors } from "./constants";
 import { useRecoilValue } from "recoil";
 import { pokeInfoAtom } from "../../atom";
 
-export function PokeInfoBlock() {
+export default function PokeInfoBlock() {
   const pokeInfos = useRecoilValue(pokeInfoAtom);
 
   return (
     <Container>
+      {/* LED 장식들 */}
       <FindLED />
       <LEDContainer>
         <LED LEDColor={LEDColors.redColor} />
@@ -27,6 +28,7 @@ export function PokeInfoBlock() {
         <LED LEDColor={LEDColors.greenColor} />
       </LEDContainer>
 
+      {/* 포켓몬 사진 데이터 */}
       <PokePhotoFrame>
         <PokeInfoNameText>
           No.{pokeInfos.id} {pokeInfos.name}
@@ -35,6 +37,7 @@ export function PokeInfoBlock() {
         <PokePhoto src={pokeInfos.sprite_front} />
       </PokePhotoFrame>
 
+      {/* 포켓몬 스탯 데이터 */}
       <PokeInfoBox>
         {pokeInfos.stats.map((stat, idx) => (
           <PokeInfoStatBox key={idx}>

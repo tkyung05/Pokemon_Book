@@ -17,8 +17,10 @@ import { pokeInfoAtom } from "../../atom";
 import { Dispatch, SetStateAction } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { PUBLIC_URL } from "../../constants";
+import { notFoundImg } from "./constants";
 
-export function DetailPokeInfo({
+export default function DetailPokeInfo({
   setDownBtn,
 }: {
   setDownBtn: Dispatch<SetStateAction<boolean>>;
@@ -27,14 +29,16 @@ export function DetailPokeInfo({
 
   return (
     <Container>
+      {/* 상세 페이지 on off 버튼 */}
       <DownBtn onClick={() => setDownBtn(false)}>
         <FontAwesomeIcon icon={faCaretDown} />
       </DownBtn>
 
+      {/* 포켓몬 데이터 유무 판단 */}
       {pokeInfos.id === 0 ? (
         <NotFoundPage>
-          <NotFoundText>Not foud!</NotFoundText>
-          <NotFoundImg src="img/notFoundImg.jpeg" />
+          <NotFoundText>Not found!</NotFoundText>
+          <NotFoundImg src={PUBLIC_URL + notFoundImg} />
         </NotFoundPage>
       ) : (
         <>

@@ -25,24 +25,22 @@ time, mark, audio, video {
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
-}
+}	
 body {
 	line-height: 1;
 	background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-      ), url( "img/bg.jpeg" );
+      ), url("https://tkyung05.github.io/Pokemon_Book/img/bg.jpeg");
 	background-repeat:no-repeat;
 	background-size: cover;
-  width: 100vw;
-	height: 100vh;
 
 	@media screen and (max-width: 800px) {
 		height: 180vh;
 		background-image: linear-gradient(
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0.2)
-      ), url( "img/mobileBg.jpeg" );
+      ), url("https://tkyung05.github.io/Pokemon_Book/img/mobileBg.jpeg" );
   }
 	progress {
     appearance: none;
