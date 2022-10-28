@@ -28,3 +28,8 @@ export const PokeBookFrame = styled.div`
     }
   }
 `;
+
+export const ScreenContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;

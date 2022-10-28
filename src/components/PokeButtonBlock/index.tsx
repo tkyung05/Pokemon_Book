@@ -13,7 +13,7 @@ import {
   BlockList,
 } from "./style";
 import { IPokeInfo } from "../../interfaces";
-import { DetailPokeInfoModal } from "../DetailPokeInfoModal";
+import { DetailPokeInfo } from "../DetailPokeInfo";
 
 export function PokeButtonBlock() {
   const [detailBtn, setDetailBtn] = useState<boolean>(false);
@@ -46,7 +46,7 @@ export function PokeButtonBlock() {
   return (
     <Container>
       {detailBtn ? (
-        <DetailPokeInfoModal />
+        <DetailPokeInfo setDownBtn={setDetailBtn} />
       ) : (
         <>
           <PokeSearchInput

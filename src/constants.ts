@@ -9,7 +9,7 @@ export const missingPoke = {
 
   sprites: {
     front_default: "img/missing_no.png",
-    back_defaut: "img/mssing_no.png",
+    back_default: "img/missing_no.png",
   },
   types: [{ slot: 0, type: { name: "mystery", url: "" } }],
   stats: [
