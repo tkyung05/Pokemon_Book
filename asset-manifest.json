@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/tkyung05/Pokemon_Book/static/js/main.b7dc5789.js",
-    "index.html": "/tkyung05/Pokemon_Book/index.html",
-    "main.b7dc5789.js.map": "/tkyung05/Pokemon_Book/static/js/main.b7dc5789.js.map"
+    "main.js": "/Pokemon_Book/static/js/main.ce805c0c.js",
+    "index.html": "/Pokemon_Book/index.html",
+    "main.ce805c0c.js.map": "/Pokemon_Book/static/js/main.ce805c0c.js.map"
   },
   "entrypoints": [
-    "static/js/main.b7dc5789.js"
+    "static/js/main.ce805c0c.js"
   ]
 }
