@@ -17,7 +17,7 @@ APIController.interceptors.response.use(
   (response) => {
     return response;
   },
-  async (err) => {
+  (err) => {
     const config = err.config;
 
     try {
