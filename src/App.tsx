@@ -6,7 +6,7 @@ import { defaultTheme } from "./styles/theme/theme";
 function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <GlobalStyle />
+      <GlobalStyle />z
       <Router />
     </ThemeProvider>
   );

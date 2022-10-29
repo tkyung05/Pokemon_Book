@@ -1,9 +1,3 @@
-import { useState } from "react";
-import { getPokeInfo } from "../../APIs/getPokeInfo";
-import { STATUS_200 } from "../../constants";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { usePokeInfo } from "../../hooks/usePokeInfo";
 import {
   Container,
   PokeSearchBtn,
@@ -12,6 +6,12 @@ import {
   Block,
   BlockList,
 } from "./style";
+import { useState } from "react";
+import { getPokeInfo } from "../../APIs/getPokeInfo";
+import { STATUS_200 } from "../../constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { usePokeInfo } from "../../hooks/usePokeInfo";
 import { IPokeInfo } from "../../interfaces";
 import { DetailPokeInfo } from "../../components";
 
