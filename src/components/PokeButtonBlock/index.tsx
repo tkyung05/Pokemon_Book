@@ -7,7 +7,7 @@ import {
   BlockList,
 } from "./style";
 import { useState } from "react";
-import { getPokeInfo } from "../../APIs/getPokeInfo";
+import { getPokeInfo } from "../../apis/getPokeInfo";
 import { STATUS_200 } from "../../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
