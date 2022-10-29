@@ -1,15 +1,18 @@
-import axios, { AxiosRequestConfig } from "axios";
+import axios, { AxiosRequestConfig, AxiosError, AxiosInstance } from "axios";
 import { missingPoke, STATUS_200, STATUS_404 } from "./constants";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 const basicConfig: AxiosRequestConfig = {
   baseURL: BASE_URL,
 };
-const APIController = axios.create(basicConfig);
+const APIController: AxiosInstance = axios.create(basicConfig);
 
 APIController.interceptors.request.use(
-  (config: AxiosRequestConfig): AxiosRequestConfig => {
+  (config: AxiosRequestConfig) => {
     return config;
+  },
+  (error: AxiosError) => {
+    return Promise.reject(error);
   }
 );
 
