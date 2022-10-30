@@ -16,7 +16,7 @@ export const Container = styled.div`
   background-color: ${(props) => props.theme.bookBgColor};
   width: 300px;
   height: 400px;
-  outline: solid 7px ${outlineColor};
+  border: solid 7px ${outlineColor};
   border-radius: 10px;
   box-shadow: 0 5px 18px -7px rgba(0, 0, 0, 1);
   transition: 0.5s;
@@ -59,7 +59,7 @@ export const PokeDetailBtn = styled.div`
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  outline: solid 10px ${deepYellowColor};
+  border: solid 10px ${deepYellowColor};
   margin: 12.5%;
   cursor: pointer;
 

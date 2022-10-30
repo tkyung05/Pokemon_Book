@@ -21,7 +21,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -53,13 +52,11 @@ body {
 		input::-webkit-search-results-decoration{
 			display:none;
 		}
-
 		input {
 			border: none;
 		}
 	}
 }
-
 ol, ul {
 	list-style: none;
 }
@@ -75,12 +72,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 * {
   box-sizing: border-box;
-	
 }
-
 a {
   text-decoration: none;
 }

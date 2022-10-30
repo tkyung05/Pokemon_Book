@@ -10,6 +10,7 @@ export const Container = styled.div`
   background-color: ${detailBgColor};
   width: 100%;
   height: 100%;
+  border-radius: 3px;
 `;
 
 export const PokePhotoFrame = styled.div`
@@ -62,6 +63,7 @@ export const DownBtn = styled.div`
   align-items: center;
   height: 10%;
   font-size: 35px;
+  border-radius: 3px 3px 0 0;
   background-color: ${yellowColor};
   color: ${detailBgColor};
   transition: 1s;

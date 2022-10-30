@@ -14,7 +14,7 @@ export const Container = styled.div`
   background-color: ${(props) => props.theme.bookBgColor};
   width: 300px;
   height: 500px;
-  outline: solid 7px ${outlineColor};
+  border: solid 7px ${outlineColor};
   border-radius: 10px;
   box-shadow: 0 5px 18px -7px rgba(0, 0, 0, 1);
   transition: 0.5s;
@@ -24,10 +24,10 @@ export const Container = styled.div`
 `;
 
 export const FindLED = styled.div`
-  width: 20%;
-  padding-bottom: 20%;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  outline: solid 5px white;
+  border: solid 5px white;
   margin: 7%;
 
   animation-duration: 1s;
