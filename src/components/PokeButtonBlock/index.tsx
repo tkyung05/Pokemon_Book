@@ -11,14 +11,15 @@ import { getPokeInfo } from "../../apis/getPokeInfo";
 import { STATUS_200 } from "../../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { usePokeInfo } from "../../hooks/usePokeInfo";
 import { IPokeInfo } from "../../interfaces";
 import { DetailPokeInfo } from "../../components";
+import { pokeInfoSelector } from "../../atoms/selector";
+import { useSetRecoilState } from "recoil";
 
 export default function PokeButtonBlock() {
   const [detailBtn, setDetailBtn] = useState<boolean>(false);
   const [searchPoke, setSearchPoke] = useState<string>("");
-  const { setPokeInfo } = usePokeInfo();
+  const setPokeInfo = useSetRecoilState(pokeInfoSelector);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchPoke(e.target.value);

@@ -1,5 +1,5 @@
 import { atom } from "recoil";
-import { IPokeInfo } from "./interfaces";
+import { IPokeInfo } from "../interfaces";
 
 export const pokeInfoAtom = atom<IPokeInfo>({
   key: "pokeInfoAtom",

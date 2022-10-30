@@ -13,19 +13,19 @@ import {
   NotFoundImg,
 } from "./style";
 import { useRecoilValue } from "recoil";
-import { pokeInfoAtom } from "../../atom";
 import { Dispatch, SetStateAction } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { PUBLIC_URL } from "../../constants";
 import { notFoundImg } from "./constants";
+import { pokeInfoSelector } from "../../atoms/selector";
 
 export default function DetailPokeInfo({
   setDownBtn,
 }: {
   setDownBtn: Dispatch<SetStateAction<boolean>>;
 }) {
-  const pokeInfos = useRecoilValue(pokeInfoAtom);
+  const pokeInfos = useRecoilValue(pokeInfoSelector);
 
   return (
     <Container>

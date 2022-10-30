@@ -13,10 +13,10 @@ import {
 } from "./style";
 import { LEDColors } from "./constants";
 import { useRecoilValue } from "recoil";
-import { pokeInfoAtom } from "../../atom";
+import { pokeInfoSelector } from "../../atoms/selector";
 
 export default function PokeInfoBlock() {
-  const pokeInfos = useRecoilValue(pokeInfoAtom);
+  const pokeInfos = useRecoilValue(pokeInfoSelector);
 
   return (
     <Container>
