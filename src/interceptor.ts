@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig, AxiosError, AxiosInstance } from "axios";
-import { missingPoke, STATUS_200, STATUS_404 } from "./constants";
+import { API_BASE_URL, missingPoke, STATUS_200, STATUS_404 } from "./constants";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = API_BASE_URL;
 const basicConfig: AxiosRequestConfig = {
   baseURL: BASE_URL,
 };

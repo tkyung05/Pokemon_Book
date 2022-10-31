@@ -1,7 +1,8 @@
 export const STATUS_200 = 200;
 export const STATUS_404 = 404;
 
-export const PUBLIC_URL = process.env.REACT_APP_PUBLIC_URL;
+export const API_BASE_URL = "https://pokeapi.co/api/v2/";
+export const PUBLIC_URL = "https://tkyung05.github.io/Pokemon_Book/";
 
 export const missingPoke = {
   id: 9999,
