@@ -13,7 +13,7 @@ import {
 } from "./style";
 import { LEDColors } from "./constants";
 import { useRecoilValue } from "recoil";
-import { pokeInfoSelector } from "../../atoms/selector";
+import { pokeInfoSelector } from "../../atoms/selectors";
 
 export default function PokeInfoBlock() {
   const pokeInfos = useRecoilValue(pokeInfoSelector);

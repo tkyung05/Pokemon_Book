@@ -1,5 +1,5 @@
 import { selector } from "recoil";
-import { pokeInfoAtom } from "./atom";
+import { pokeInfoAtom } from "./atoms";
 
 export const pokeInfoSelector = selector({
   key: "pokeInfoSelector",

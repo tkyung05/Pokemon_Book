@@ -18,7 +18,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { PUBLIC_URL } from "../../constants";
 import { notFoundImg } from "./constants";
-import { pokeInfoSelector } from "../../atoms/selector";
+import { pokeInfoSelector } from "../../atoms/selectors";
 
 export default function DetailPokeInfo({
   setDownBtn,
@@ -44,7 +44,13 @@ export default function DetailPokeInfo({
         <>
           <PokePhotoFrame>
             <PokePhoto src={pokeInfos.sprite_front} />
-            <PokePhoto src={pokeInfos.sprite_back} />
+            <PokePhoto
+              src={
+                pokeInfos.sprite_back === null
+                  ? pokeInfos.sprite_front
+                  : pokeInfos.sprite_back
+              }
+            />
           </PokePhotoFrame>
 
           <PokeInfoContainer>
